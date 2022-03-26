@@ -15,18 +15,18 @@
         $('.map').maphilight({
             fillColor: '008800'
         });
-        $('#star1').click(function(e) {
+        $('#star1, #star2').click(function(e) {
             e.preventDefault();
-            var data = $('#star1').mouseout().data('maphilight') || {};
+            var data = $(this).mouseout().data('maphilight') || {};
             data.alwaysOn = !data.alwaysOn;
-            $('#star1').data('maphilight', data).trigger('alwaysOn.maphilight');
+            $(this).data('maphilight', data).trigger('alwaysOn.maphilight');
         });
-        $('#star2').click(function(e) {
-            e.preventDefault();
-            var data = $('#star2').mouseout().data('maphilight') || {};
-            data.alwaysOn = !data.alwaysOn;
-            $('#star2').data('maphilight', data).trigger('alwaysOn.maphilight');
-        });
+//         $('#star2').click(function(e) {
+//             e.preventDefault();
+//             var data = $('#star2').mouseout().data('maphilight') || {};
+//             data.alwaysOn = !data.alwaysOn;
+//             $('#star2').data('maphilight', data).trigger('alwaysOn.maphilight');
+//         });
     });
     
     </script>

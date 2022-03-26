@@ -15,18 +15,7 @@
         $('.map').maphilight({
             fillColor: '008800'
         });
-        $('#hilightlink').mouseover(function(e) {
-            $('#square2').mouseover();
-        }).mouseout(function(e) {
-            $('#square2').mouseout();
-        }).click(function(e) { e.preventDefault(); });
-        $('#starlink').click(function(e) {
-            e.preventDefault();
-            var data = $('#star').data('maphilight') || {};
-            data.neverOn = !data.neverOn;
-            $('#star').data('maphilight', data);
-        });
-        $('#star,#starlink2').click(function(e) {
+        $('#star').click(function(e) {
             e.preventDefault();
             var data = $('#star').mouseout().data('maphilight') || {};
             data.alwaysOn = !data.alwaysOn;
@@ -47,6 +36,7 @@
  <img src="assets/Skeleton_for_Github.svg" alt="Illustration of human skeleton" height="X" width="600" class="map" usemap="#features"> 
  <map name="features">
     <area id="star" shape="poly" coords="1,1,100,100,1,100" href="#" alt="star" class="group" data-maphilight='{"strokeColor":"0000ff","strokeWidth":5,"fillColor":"ff0000","fillOpacity":0.6}'>
+    <area id="star" shape="poly" coords="120,120,300,300,112,130" href="#" alt="star" class="group" data-maphilight='{"strokeColor":"0000ff","strokeWidth":2,"fillColor":"fff000","fillOpacity":0.8}'>
  </map>
 </p>
     

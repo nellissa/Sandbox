@@ -5,6 +5,37 @@
     <meta charset="UTF-8">
     <meta name="description" content="This field contains information about your page. It is usually around two sentences long.">.
     <meta name="author" content="Conor Sheils">
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="jquery.maphilight.js"></script>
+    
+    <script>
+      
+      $(function() {
+        $('.map').maphilight({
+            fillColor: '008800'
+        });
+        $('#hilightlink').mouseover(function(e) {
+            $('#square2').mouseover();
+        }).mouseout(function(e) {
+            $('#square2').mouseout();
+        }).click(function(e) { e.preventDefault(); });
+        $('#starlink').click(function(e) {
+            e.preventDefault();
+            var data = $('#star').data('maphilight') || {};
+            data.neverOn = !data.neverOn;
+            $('#star').data('maphilight', data);
+        });
+        $('#star,#starlink2').click(function(e) {
+            e.preventDefault();
+            var data = $('#star').mouseout().data('maphilight') || {};
+            data.alwaysOn = !data.alwaysOn;
+            $('#star').data('maphilight', data).trigger('alwaysOn.maphilight');
+        });
+    });
+    
+    </script>
+    
   </head>
   
   <body>

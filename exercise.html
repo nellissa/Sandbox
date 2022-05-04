@@ -33,7 +33,7 @@
         $('.map').maphilight({
             fillColor: '008800'
         });
-        $('#rightscapula, #star2').click(function(e) {
+        $('#rightscapula').click(function(e) {
             e.preventDefault();
             var data = $(this).mouseout().data('maphilight') || {};
             data.alwaysOn = !data.alwaysOn;
@@ -59,8 +59,7 @@
 <p>
  <img src="assets/Skeleton_for_Github.svg" alt="Illustration of human skeleton" height="X" width="600" class="map" usemap="#features"> 
  <map name="features">
-     <area id="rightscapula" shape="poly" coords="212,360,210,356,206,357,208,361,210,363,209,373,208,375,204,378,200,382,190,385,179,388,171,390,169,391,154,395,142,394,139,391,141,378,145,371,146,369,166,353,159,332,157,326,159,320,165,318,167,312,173,303,179,286,185,273,190,249,193,239,198,225,209,198,211,191,213,186,217,184,224,181,234,180,238,182,244,185,249,190,259,198,264,205,273,223,275,226,281,249,282,257,284,269,290,311,289,340,287,349,282,360,278,366,275,370,271,370,263,371,258,369,246,365,237,362,225,363,218,362" href="#" alt="rightscapula" class="group" data-maphilight='{"strokeColor":"0000ff","strokeWidth":2,"fillColor":"fff000","fillOpacity":0.8}'>
-     <area id="star2" shape="poly" coords="120,120,300,300,112,130" href="#" alt="star" class="group" data-maphilight='{"strokeColor":"0000ff","strokeWidth":2,"fillColor":"fff000","fillOpacity":0.8}'>
+     <area id="rightscapula" shape="poly" coords="64,558,63,557,62,557,62,558,63,559,63,562,62,562,61,564,60,565,57,566,54,566,51,567,51,567,46,569,43,568,42,567,42,564,43,561,44,561,50,556,48,549,47,548,48,546,50,545,50,544,52,541,54,536,56,532,57,525,58,522,59,518,63,510,63,507,64,506,65,505,67,504,70,504,71,504,73,505,75,507,78,509,79,511,82,517,83,518,84,525,85,527,85,531,87,543,87,552,86,555,85,558,84,560,82,561,81,561,79,561,77,561,74,559,71,559,67,559,65,559" href="#" alt="rightscapula" class="group" data-maphilight='{"strokeColor":"0000ff","strokeWidth":2,"fillColor":"fff000","fillOpacity":0.8}'>
  </map>
 </p>
     
